@@ -21,6 +21,8 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     //MARK: Override Methods
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // Алексей, когда надо использовать self.  а когда можно и без этой приставки писать?
         self.userNameField.delegate = self
         self.passwordField.delegate = self
 
@@ -28,6 +30,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         
         // Алексей, если подскажешь, как определить при старте приложения правильную ориентацию устройства, то следующие строки уберу
         // Понимаю, что это костыли, но UIDevice.current.orientation.isLandscape при запуске работает криво, поэтому пришлось так выкручиваться
+        // Если в симуляторе запустить приложение при альбомной ориентации устройства, то UIDevice.current.orientation.isLandscape возвращает false
         if UIDevice.current.userInterfaceIdiom == .phone {
             if self.view.bounds.height < self.view.bounds.width {
                 loginImage.isHidden = true
@@ -46,7 +49,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "showTabBarSegue" {
+        if segue.identifier == "showTabBarSegue" {                                                  // Предвижу твой комментарий, что это условие в данном случае лишнее, но так спокойнее (привычка)
             let tabBarController = segue.destination as! UITabBarController
             let destinationVC = tabBarController.viewControllers?.first as! LogoutViewController
             destinationVC.userName = userNameField.text
@@ -97,15 +100,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
 
 extension LoginViewController {
     
-    private func showAlert(withTitle title: String, andMessage message: String) {
-        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        let okAction = UIAlertAction(title: "OK", style: .default) { _ in
-            self.passwordField.text = ""
-        }
-        alert.addAction(okAction)
-        present(alert, animated: true)
-    }
-        
+    // Алексей, в каком случае в extention надо использовать private? Здесь надо?
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         switch textField {
         case userNameField:
@@ -116,10 +111,21 @@ extension LoginViewController {
             self.checkLoginAndPassword()
             return false
         default:
-            // Алексей, как идентифицировать имя объекта, переданного в textField ? На случай, если добавлю еще одно поле, но не опишу его в switch
+            // Алексей, как идентифицировать имя объекта, переданного в textField ?
+            // На случай, если вдруг добавлю еще одно поле, но не опишу его в switch
             print("\(textField.description) textFieldShouldReturn")
             return false
         }
     }
+    
+    private func showAlert(withTitle title: String, andMessage message: String) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "OK", style: .default) { _ in
+            self.passwordField.text = ""
+        }
+        alert.addAction(okAction)
+        present(alert, animated: true)
+    }
+    
 }
 
