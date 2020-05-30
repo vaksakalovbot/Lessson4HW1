@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		D4C94621248206BF00CBAC88 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C94620248206BF00CBAC88 /* AppDelegate.swift */; };
 		D4C94623248206BF00CBAC88 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C94622248206BF00CBAC88 /* SceneDelegate.swift */; };
-		D4C94625248206BF00CBAC88 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C94624248206BF00CBAC88 /* ViewController.swift */; };
+		D4C94625248206BF00CBAC88 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C94624248206BF00CBAC88 /* LoginViewController.swift */; };
 		D4C94628248206BF00CBAC88 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4C94626248206BF00CBAC88 /* Main.storyboard */; };
 		D4C9462A248206C000CBAC88 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4C94629248206C000CBAC88 /* Assets.xcassets */; };
 		D4C9462D248206C000CBAC88 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4C9462B248206C000CBAC88 /* LaunchScreen.storyboard */; };
@@ -19,7 +19,7 @@
 		D4C9461D248206BF00CBAC88 /* Lessson4HW1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lessson4HW1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4C94620248206BF00CBAC88 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D4C94622248206BF00CBAC88 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		D4C94624248206BF00CBAC88 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D4C94624248206BF00CBAC88 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		D4C94627248206BF00CBAC88 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D4C94629248206C000CBAC88 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D4C9462C248206C000CBAC88 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -56,15 +56,31 @@
 		D4C9461F248206BF00CBAC88 /* Lessson4HW1 */ = {
 			isa = PBXGroup;
 			children = (
-				D4C94620248206BF00CBAC88 /* AppDelegate.swift */,
-				D4C94622248206BF00CBAC88 /* SceneDelegate.swift */,
-				D4C94624248206BF00CBAC88 /* ViewController.swift */,
-				D4C94626248206BF00CBAC88 /* Main.storyboard */,
+				D4C94634248228AC00CBAC88 /* SupportingFiles */,
+				D4C94624248206BF00CBAC88 /* LoginViewController.swift */,
+				D4C946352482329E00CBAC88 /* Storyboards */,
 				D4C94629248206C000CBAC88 /* Assets.xcassets */,
-				D4C9462B248206C000CBAC88 /* LaunchScreen.storyboard */,
-				D4C9462E248206C000CBAC88 /* Info.plist */,
 			);
 			path = Lessson4HW1;
+			sourceTree = "<group>";
+		};
+		D4C94634248228AC00CBAC88 /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				D4C94620248206BF00CBAC88 /* AppDelegate.swift */,
+				D4C94622248206BF00CBAC88 /* SceneDelegate.swift */,
+				D4C9462E248206C000CBAC88 /* Info.plist */,
+			);
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		D4C946352482329E00CBAC88 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				D4C94626248206BF00CBAC88 /* Main.storyboard */,
+				D4C9462B248206C000CBAC88 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,7 +154,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D4C94625248206BF00CBAC88 /* ViewController.swift in Sources */,
+				D4C94625248206BF00CBAC88 /* LoginViewController.swift in Sources */,
 				D4C94621248206BF00CBAC88 /* AppDelegate.swift in Sources */,
 				D4C94623248206BF00CBAC88 /* SceneDelegate.swift in Sources */,
 			);
@@ -286,7 +302,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 883VHW277J;
-				INFOPLIST_FILE = Lessson4HW1/Info.plist;
+				INFOPLIST_FILE = Lessson4HW1/SupportingFiles/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -304,7 +320,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 883VHW277J;
-				INFOPLIST_FILE = Lessson4HW1/Info.plist;
+				INFOPLIST_FILE = Lessson4HW1/SupportingFiles/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
