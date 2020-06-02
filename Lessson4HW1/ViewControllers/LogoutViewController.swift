@@ -22,14 +22,11 @@ class LogoutViewController: UIViewController {
         gradientLayer.frame = self.view.bounds
         gradientLayer.colors = [UIColor.purple.cgColor, UIColor.blue.cgColor]
         self.view.layer.insertSublayer(gradientLayer, at: 0)
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
         if let userName = userName {
             welcomeLabel.text = "Welcome, \(userName)!"
         }
     }
-    
+        
     override func viewDidLayoutSubviews() {
         gradientLayer.frame = self.view.bounds
     }

@@ -26,7 +26,7 @@
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="done" secureTextEntry="YES" textContentType="password"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VGg-QF-tor">
-                                <rect key="frame" x="137.5" y="266" width="45" height="30"/>
+                                <rect key="frame" x="137.5" y="250" width="45" height="30"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="Log In"/>
                                 <connections>
@@ -34,14 +34,14 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Jp-8i-fb6">
-                                <rect key="frame" x="16" y="312" width="133" height="30"/>
+                                <rect key="frame" x="16" y="288" width="133" height="30"/>
                                 <state key="normal" title="Forgot User Name?"/>
                                 <connections>
                                     <action selector="forgotUserName" destination="BYZ-38-t0r" eventType="touchUpInside" id="yX3-Kj-ITs"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2pD-80-cCg">
-                                <rect key="frame" x="181" y="312" width="123" height="30"/>
+                                <rect key="frame" x="181" y="288" width="123" height="30"/>
                                 <state key="normal" title="Forgot Password?"/>
                                 <connections>
                                     <action selector="forgotPassword" destination="BYZ-38-t0r" eventType="touchUpInside" id="iCT-zN-TOv"/>
@@ -58,7 +58,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="2pD-80-cCg" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="3Jp-8i-fb6" secondAttribute="trailing" constant="8" symbolic="YES" id="0kN-8O-DLV"/>
-                            <constraint firstItem="3Jp-8i-fb6" firstAttribute="top" secondItem="VGg-QF-tor" secondAttribute="bottom" constant="16" id="1xr-gy-jpw">
+                            <constraint firstItem="3Jp-8i-fb6" firstAttribute="top" secondItem="VGg-QF-tor" secondAttribute="bottom" constant="8" id="1xr-gy-jpw">
                                 <variation key="heightClass=compact-widthClass=compact" constant="1"/>
                             </constraint>
                             <constraint firstItem="3Jp-8i-fb6" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="5R5-D5-Bhm"/>
@@ -66,12 +66,12 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="2pD-80-cCg" secondAttribute="trailing" constant="16" id="6Bj-KB-43g"/>
                             <constraint firstItem="MmU-Hc-q1K" firstAttribute="top" secondItem="xsi-hz-Dn2" secondAttribute="bottom" constant="16" id="6UQ-GM-212"/>
                             <constraint firstItem="SuV-vR-bc4" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="9yj-27-M5l"/>
-                            <constraint firstItem="2pD-80-cCg" firstAttribute="top" secondItem="VGg-QF-tor" secondAttribute="bottom" constant="16" id="CjS-cd-cPk">
+                            <constraint firstItem="2pD-80-cCg" firstAttribute="top" secondItem="VGg-QF-tor" secondAttribute="bottom" constant="8" id="CjS-cd-cPk">
                                 <variation key="heightClass=compact-widthClass=compact" constant="1"/>
                             </constraint>
                             <constraint firstItem="VGg-QF-tor" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Dwp-Ps-Tsw"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="MmU-Hc-q1K" secondAttribute="trailing" constant="16" id="H4u-mI-FUJ"/>
-                            <constraint firstItem="VGg-QF-tor" firstAttribute="top" secondItem="MmU-Hc-q1K" secondAttribute="bottom" constant="32" id="UB1-Uf-r3n">
+                            <constraint firstItem="VGg-QF-tor" firstAttribute="top" secondItem="MmU-Hc-q1K" secondAttribute="bottom" constant="16" id="UB1-Uf-r3n">
                                 <variation key="heightClass=compact-widthClass=compact" constant="16"/>
                             </constraint>
                             <constraint firstItem="xsi-hz-Dn2" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="XzA-XQ-ena"/>
